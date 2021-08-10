@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "780362848634",
+    "project_id": "linkhead-786",
+    "storage_bucket": "linkhead-786.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:780362848634:android:930b79953d205c7fdc9ec3",
+        "android_client_info": {
+          "package_name": "com.dholasain.linkhead"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "780362848634-h2qhfae8f58hubssc7dq1d7ngio2aa9d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlA6efNpqc3vj1-hwlpXUIPp47TTj02JU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "780362848634-h2qhfae8f58hubssc7dq1d7ngio2aa9d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

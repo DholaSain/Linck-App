@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:linkhead/Controller/authController.dart';
 import 'package:linkhead/Screens/HomeScreen.dart';
 import 'package:linkhead/Services/DatabaseService.dart';
-import 'package:linkhead/main.dart';
 
 class EditProfileScreen extends GetWidget<AuthController> {
   final TextEditingController linkController = TextEditingController();
@@ -19,7 +18,8 @@ class EditProfileScreen extends GetWidget<AuthController> {
   final TextEditingController twichController = TextEditingController();
   final TextEditingController twitterController = TextEditingController();
   final TextEditingController youtubeController = TextEditingController();
-
+  final String userName =
+      Get.find<AuthController>().userGetter!.email!.split("@")[0];
   @override
   Widget build(BuildContext context) {
     return SafeArea(

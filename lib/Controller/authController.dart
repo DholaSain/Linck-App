@@ -93,7 +93,7 @@ class AuthController extends GetxController {
     try {
       UserCredential _authResult = await _auth.signInWithEmailAndPassword(
           email: email, password: password);
-
+      Get.put(UserController());
       Get.find<UserController>().userSetter =
           await DataBase().getUser(_authResult.user!.email!.split("@")[0]);
       Get.snackbar("Signedin", "Signedin Successfully",
@@ -109,9 +109,8 @@ class AuthController extends GetxController {
   Future<void> signOut() async {
     try {
       await _auth.signOut();
-
-      await Get.offAllNamed('/signin');
       Get.find<UserController>().clear();
+      await Get.offAllNamed('/signin');
     } catch (e) {
       Get.snackbar("Error in Signing Out", e.toString(),
           snackPosition: SnackPosition.BOTTOM);

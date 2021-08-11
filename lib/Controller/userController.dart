@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 import 'package:linkhead/Controller/authController.dart';
 import 'package:linkhead/Models/userModel.dart';
 import 'package:linkhead/Services/DatabaseService.dart';
-import 'package:linkhead/main.dart';
 
 class UserController extends GetxController {
   Rxn<UserModel> _userModel = Rxn<UserModel>();
@@ -12,7 +11,8 @@ class UserController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-
+    String userName =
+        Get.find<AuthController>().userGetter!.email!.split("@")[0];
     _userModel.bindStream(Stream.fromFuture(DataBase().getUser(userName)));
   }
 
